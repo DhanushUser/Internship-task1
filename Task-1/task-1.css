@@ -1,0 +1,239 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    
+}
+body{
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    width: 100%;
+    height: 100%;
+    
+    
+    color: white;
+}
+nav{
+    position: sticky;
+    z-index: 20;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 15px 40px;
+    background-image: linear-gradient(120deg, #cfa51a 0%, #de6e4f 100%);
+
+    & .menubar{
+        font-size: 25px;
+        display: none;
+    }
+
+    & .name h3{
+        font-size: 24px;
+    }
+
+    & ul{
+        display: flex;
+        justify-content: space-between;
+        gap: 50px;
+        margin-right: 10vw;
+
+        & a{
+            color: white;
+        }
+
+        & li{
+            cursor: pointer;
+            font-size: 19px;
+            padding: 5px 10px;
+            transition: .3s;
+
+            &:hover{
+                background-color: rgb(151, 6, 120);
+                border-radius: 6px;
+            }
+        }
+    }
+}
+
+.hero{
+    
+    /* background: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(./bg.jpg);
+    background-position: center;
+    background-size: cover;
+    object-fit: cover; */
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    margin-top: 20vh;
+    margin-bottom: 100px;
+
+    .image {
+        margin-top: 50px;
+        position: relative;
+        left: 15vw;
+        /* background: white; */
+        padding: 20px 50px;
+
+        img{
+            border-radius: 8px;
+            height: 200px;
+            width: 200px;
+            object-fit: cover;
+            background-position: center;
+            background-size: cover;
+            margin-inline: 30px;
+            transition: .5s;
+            box-shadow: 10px 8px 10px #4a4a4a;
+            
+            
+
+            &:hover{
+                border: 1px solid orange;
+                transform: scale(1.2);
+            }
+        }
+    }
+
+    & .intern{
+        background: #e6dee9;
+        /* backdrop-filter: blur(45px); */
+        border: 2px solid rgb(255, 179, 0);
+        padding: 10px;
+        margin-left: 25%;
+        width: 50%;
+        font-size: 16px;
+        color: black;
+        font-weight: 500;
+        margin-bottom: 100px;
+    }
+
+    
+
+    & .desc{
+        font-weight:300;
+        font-size: 15px;
+        width: 70%;
+        margin-left: 20vw;
+        color: black;
+
+        & h2{
+            font-weight: 600;
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+ .title{
+    margin-left: 10vw;
+    margin-top: 50px;
+    left: 10%;
+    margin-bottom: 50px;
+    color: rgb(13, 104, 89);
+
+    & h2{
+        border-bottom: 2px solid black;
+        max-width: 750px;
+    }
+
+
+
+    & p{
+        
+        font-size: 17px;
+        margin: 10px 100px;
+    }
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    & h3{
+        color: black;
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    & .form{
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        padding: 20px 40px;
+        border-radius: 8px;
+        margin-bottom: 100px;
+
+
+        & input{
+            padding:5px 10px;
+            margin-bottom: 10px;
+            border: 1ps solid black;
+            outline: none;
+
+            &::placeholder{
+                font-size: 12px;
+            }
+
+            
+        }
+
+        button{
+            padding: 5px 10px;
+            outline: none;
+            border: none;
+            background-color: rgb(24, 64, 193);
+            color: white;
+            border-radius: 4px;
+        }
+    }
+}
+
+
+
+@media (max-width:650px) {
+    nav ul{
+        padding: 10px;
+        background: #3c0000;
+        position: absolute;
+        top: 10%;
+        left: 70%;
+        z-index: 10;
+        display: none;
+    }
+    .hero .image img{
+        margin-bottom: 50px;
+    }
+     .hero .intern{
+        
+        border: 1px solid orange;
+        padding: 10px;
+        font-size: 14px;
+    }
+    .title p{
+        font-size: 14px;
+    }
+    nav {
+
+        & .menubar{
+            display: block;
+        }
+    }
+}
+
+@media (max-width:568px) {
+    .hero{
+
+        & .image{
+            left: 5%;
+            margin-left: 0;
+        }
+    }
+}
